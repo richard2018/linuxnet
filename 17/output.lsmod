@@ -1,0 +1,67 @@
+Module                  Size  Used by
+hello_world             1600  0 
+ppdev                   8676  0 
+lp                     11012  0 
+vmblock                14240  4 
+vmxnet                 14816  0 
+vmmemctl               10140  0 
+ipv6                  226272  10 
+vmhgfs                 45120  2 
+dm_snapshot            15552  0 
+dm_mirror              19152  0 
+dm_mod                 50232  2 dm_snapshot,dm_mirror
+loop                   15048  0 
+tsdev                   7520  0 
+snd_ens1371            23616  1 
+gameport               14632  1 snd_ens1371
+snd_seq_dummy           3844  0 
+snd_seq_oss            28768  0 
+snd_seq_midi            8192  0 
+snd_seq_midi_event      7008  2 snd_seq_oss,snd_seq_midi
+snd_seq                45680  6 snd_seq_dummy,snd_seq_oss,snd_seq_midi,snd_seq_midi_event
+snd_rawmidi            22560  2 snd_ens1371,snd_seq_midi
+snd_seq_device          7820  5 snd_seq_dummy,snd_seq_oss,snd_seq_midi,snd_seq,snd_rawmidi
+snd_ac97_codec         83104  1 snd_ens1371
+snd_ac97_bus            2400  1 snd_ac97_codec
+snd_pcm_oss            38368  0 
+snd_mixer_oss          15200  1 snd_pcm_oss
+snd_pcm                68676  3 snd_ens1371,snd_ac97_codec,snd_pcm_oss
+snd_timer              20996  2 snd_seq,snd_pcm
+parport_pc             32132  1 
+snd                    47012  12 snd_ens1371,snd_seq_oss,snd_seq,snd_rawmidi,snd_seq_device,snd_ac97_codec,snd_pcm_oss,snd_mixer_oss,snd_pcm,snd_timer
+parport                33256  3 ppdev,lp,parport_pc
+soundcore               9248  1 snd
+snd_page_alloc         10184  1 snd_pcm
+psmouse                35016  0 
+i2c_piix4               8268  0 
+floppy                 53156  0 
+serio_raw               6660  0 
+shpchp                 33024  0 
+pci_hotplug            28704  1 shpchp
+i2c_core               19680  1 i2c_piix4
+intel_agp              22204  1 
+agpgart                29896  1 intel_agp
+rtc                    12372  0 
+pcspkr                  3072  0 
+evdev                   9088  1 
+ext3                  119240  1 
+jbd                    52456  1 ext3
+mbcache                 8356  1 ext3
+ide_cd                 36064  0 
+cdrom                  32544  1 ide_cd
+sd_mod                 19040  3 
+piix                    9444  0 [permanent]
+pcnet32                30692  0 
+mii                     5344  1 pcnet32
+uhci_hcd               21164  0 
+usbcore               112644  2 uhci_hcd
+generic                 4868  0 [permanent]
+ide_core              110504  3 ide_cd,piix,generic
+mptspi                 16136  2 
+mptscsih               21664  1 mptspi
+mptbase                46176  2 mptspi,mptscsih
+scsi_transport_spi     22336  1 mptspi
+scsi_mod              124168  4 sd_mod,mptspi,mptscsih,scsi_transport_spi
+thermal                13608  0 
+processor              28840  1 thermal
+fan                     4804  0 
